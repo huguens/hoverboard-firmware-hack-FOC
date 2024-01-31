@@ -15,7 +15,7 @@
   //#define VARIANT_NUNCHUK     // Variant for Nunchuk controlled vehicle build
   //#define VARIANT_PPM         // Variant for RC-Remote with PPM-Sum Signal
   //#define VARIANT_PWM         // Variant for RC-Remote with PWM Signal
-  //#define VARIANT_IBUS        // Variant for RC-Remotes with FLYSKY IBUS
+  #define VARIANT_IBUS        // Variant for RC-Remotes with FLYSKY IBUS
   //#define VARIANT_HOVERCAR    // Variant for HOVERCAR build
   //#define VARIANT_HOVERBOARD  // Variant for HOVERBOARD build
   //#define VARIANT_TRANSPOTTER // Variant for TRANSPOTTER build https://github.com/NiklasFauth/hoverboard-firmware-hack/wiki/Build-Instruction:-TranspOtter https://hackaday.io/project/161891-transpotter-ng
@@ -461,7 +461,7 @@
 * Connected to Right sensor board cable. Channel 1: steering, Channel 2: speed.
 */
   #define CONTROL_IBUS                    // use IBUS as input. Number indicates priority for dual-input.
-  #define IBUS_NUM_CHANNELS       14      // total number of IBUS channels to receive, even if they are not used.
+  #define IBUS_NUM_CHANNELS       10      // total number of IBUS channels to receive, even if they are not used.
   #define IBUS_LENGTH             0x20
   #define IBUS_COMMAND            0x40
   #define USART3_BAUD             115200
@@ -484,7 +484,7 @@
     #define PRI_INPUT2            3, -1000, 0, 1000, 0  // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
   #endif
 
-  // #define TANK_STEERING                // use for tank steering, each input controls each wheel 
+   #define TANK_STEERING                // use for tank steering, each input controls each wheel 
 
   #if defined(CONTROL_SERIAL_USART3) && !defined(DUAL_INPUTS)
     #define DEBUG_SERIAL_USART2           // left sensor cable debug
